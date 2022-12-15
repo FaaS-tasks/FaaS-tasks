@@ -46,4 +46,4 @@ Our project will focus on Knative Serving.
 
 ## Intallation and usage
 
-1. **[Intallation](#installation)**
+1. **Intallation**
