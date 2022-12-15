@@ -29,6 +29,12 @@ There are two compoments:
    Ideal to running applications services inside kubernetes and the scaling of applications you plan to deploy.
 
    ![serving-architecture](knativeServing-architecture.png)
+   
+   The architecture above shows how a service is created and can be summarized as follows:
+   
+    - The service automatically creates a configuration and a route for the service
+    - The configuration manages the revisions
+    - Each revision is associated to a Kubernetes deployment
 
    Above the knative serving architecture. For [more details](https://knative.dev/docs/concepts/) about its components.
 
