@@ -9,12 +9,12 @@ Our ongoing work is based on the [knative](https://knative.dev/) serverless fram
 
 #### **1. [General overview](#General-overview)**
 
-#### **2. [Intallation and usage](#Installation-and-usage)**
+#### **2. [Intallation](#Installation)**
         
-1. **[Intallation](#installation)**
-2. **[Usages](#usages)**
+#### **3. [Usage](#Usage)**
+#### **4. [Usage](#Usage)**
 
-#### **3. [Tests](#tests)**
+#### **5. [Tests](#tests)**
 
 ## General overview
 
@@ -44,13 +44,11 @@ There are two compoments:
 
 Our project will focus on Knative Serving.   
 
-## Intallation and usage
-
-1. **Intallation**
+## Intallation 
 
    In this section, we will present the different installation modes of the knative platform. 
    
-   a) **Setup a Serverless (Knative) Cluster in single-node**
+   1. **Setup a Serverless (Knative) Cluster in single-node**
    
       * Requirements
         - Knative requires a Kubernetes cluster v1.21
@@ -63,12 +61,12 @@ Our project will focus on Knative Serving.
         
    The following table presents the different hardware and software characteristics used in our work.
        
-     |Informations matériels et logiciels| Descriptions |
-     |-----------------------------------|--------------| 
-     |computer brand                     |Dell-Precision-3561|
-     |Ram memory                       | 16 GB|
-     |Processor                    | 11th Gen Intel® Core™ i7-11850H @ 2.50GHz × 16|
-     |Storage                      | 512,1 GB SSD|
-     |OS name       | Ubuntu 20.04.5 LTS|
-     |OS type        | 64 bits|
+   |Informations matériels et logiciels| Descriptions |
+   |-----------------------------------|--------------| 
+   |computer brand                     |Dell-Precision-3561|
+   |Ram memory                       | 16 GB|
+   |Processor                    | 11th Gen Intel® Core™ i7-11850H @ 2.50GHz × 16|
+   |Storage                      | 512,1 GB SSD|
+   |OS name       | Ubuntu 20.04.5 LTS|
+   |OS type        | 64 bits|
 
