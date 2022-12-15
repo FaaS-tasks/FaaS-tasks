@@ -9,12 +9,12 @@ Our ongoing work is based on the [knative](https://knative.dev/) serverless fram
 
 #### **1. [General overview](#General-overview)**
 
-#### **2. [Intallation and usage](#installation-and-usage)**
+#### **2. [Intallation and usage](#Installation-and-usage)**
         
-1. **[Intallation](#installation)**
-2. **[Usages](#usages)**
+1. **[Intallation](#Installation)**
+2. **[Usages](#Usages)**
 
-#### **3. [Tests](#tests)**
+#### **3. [Tests](#Tests)**
 
 ## General overview
 
