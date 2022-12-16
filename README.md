@@ -9,7 +9,7 @@ Our ongoing work is based on the [knative](https://knative.dev/) serverless fram
 
 #### **1. [General overview](#general-overview)**
 
-#### **2. [Intallation](#2-intallation)**
+#### **2. [Installation](#installation)**
         
 #### **3. [Usage](#usage)**
 
@@ -43,7 +43,7 @@ There are two compoments:
 
 Our project will focus on Knative Serving.   
 
-## Intallation 
+## Installation 
 
    In this section, we will present the different installation modes of the knative platform. 
    
