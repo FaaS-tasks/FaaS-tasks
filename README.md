@@ -69,3 +69,79 @@ Our project will focus on Knative Serving.
    |OS name       | Ubuntu 20.04.5 LTS|
    |OS type        | 64 bits|
 
+   ###### Step1: Install kubernetes cluster
+   For the kubernetes installation, we will use [minikube](https://kubernetes.io/fr/docs/setup/learning-environment/minikube/). Minikube is a tool that makes it easy to run Kubernetes locally.
+   
+   Download [minikube](https://kubernetes.io/fr/docs/setup/learning-environment/minikube/) and add it to your path: 
+   
+   ```shell
+   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   ```
+   
+   Download [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) and add to your path:
+   
+   ```shell
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   ```
+   
+   To start Minikube and create a cluster, make sure you have [docker](https://docs.docker.com/engine/install/ubuntu/) or [kvm](https://ubuntu.com/blog/kvm-hyphervisor) installed. Read more about [minikube](https://kubernetes.io/fr/docs/setup/learning-environment/minikube/).
+   
+   ###### **Step2: Knative Install on Minikube**
+   Before you start, make sure you have [knative CLI](https://knative.dev/docs/install/quickstart-install/#before-you-begin) installed. Download and install knative CLI:
+   
+   ```shell
+   curl -LO https://github.com/knative/client/releases/download/knative-v1.8.1/kn-linux-amd64
+   mv <path-to-binary-file> kn
+   chmod +x kn
+   mv kn /usr/local/bin
+   kn version
+   ```
+   
+   The result is similar to this:
+
+   ![kn-version](kn-version.png)
+   
+   To get started, install the Knative `quickstart` plugin:
+   
+   * Download the binary for your system from the [quickstart release page](https://github.com/knative-sandbox/kn-plugin-quickstart/releases)
+   * Rename the file, make the plugin executable and move the executable file to your directory:
+   ```shell
+   mv kn-quickstart-amd64 kn-quickstart
+   chmod +x kn-quickstart
+   mv kn-quickstart /usr/local/bin
+   ```
+   Run knative on minikube by using the command:
+
+
+   ```shell
+   kn quickstart minikube
+   ```
+   
+      The output of the previous command asked you to run minikube tunnel. Run the following command to start the process in a secondary terminal window, then return to the primary window and press enter to continue:
+   
+   ```shell
+   minikube tunnel --profile knative
+   ```
+   
+   The result is similar to this:
+
+   ![result](result.png)
+   
+   Check if all components are started:
+
+   ```
+    kubectl get pods -A
+
+   ```
+   ![pods](pod.png)
+   
+  2. **Setup a serverless (knative) Cluster in Multi-node**
+
+   To deploy a knative multi-node cluster, follow the steps in the documentation  [knativeMulti-node](knativeCluster-Multi-Node.md)
+
+
+   
+
+
