@@ -7,11 +7,11 @@ In particular, we are investigating scheduling strategies for single-function ta
 Our ongoing work is based on the [knative](https://knative.dev/) serverless framework.
 ## Table of contents
 
-#### **1. [General overview](#General-overview)**
+#### **1. [General overview](#general-overview)**
 
-#### **2. [Intallation](#Installation)**
+#### **2. [Intallation](#installation)**
         
-#### **3. [Usage](#Usage)**
+#### **3. [Usage](#usage)**
 
 #### **4. [Tests](#tests)**
 
