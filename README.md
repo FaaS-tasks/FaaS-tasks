@@ -12,9 +12,8 @@ Our ongoing work is based on the [knative](https://knative.dev/) serverless fram
 #### **2. [Intallation](#Installation)**
         
 #### **3. [Usage](#Usage)**
-#### **4. [Usage](#Usage)**
 
-#### **5. [Tests](#tests)**
+#### **4. [Tests](#tests)**
 
 ## General overview
 
