@@ -125,9 +125,11 @@ Our project will focus on Knative Serving.
    minikube tunnel --profile knative
    ```
    
+   ![minikube-tunnel](minikube-tunnel.png)
+   
    The result is similar to this:
 
-   ![result](result.png)
+   ![result](start-knative.png )
    
    Check if all components are started:
 
