@@ -137,7 +137,7 @@ Our project will focus on Knative Serving.
     kubectl get pods -A
 
    ```
-   ![pods](pod.png)
+   ![pods](pods.png)
    
   2. **Setup a serverless (knative) Cluster in Multi-node**
 
