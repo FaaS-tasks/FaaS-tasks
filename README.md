@@ -140,7 +140,10 @@ Our project will focus on Knative Serving.
   2. **Setup a serverless (knative) Cluster in Multi-node**
 
    To deploy a knative multi-node cluster, follow the steps in the documentation  [knativeMulti-node](knativeCluster-Multi-Node.md)
-## Tests (Deploying a knative service)
+   
+## Tests 
+
+   Deploying a knative service:
 
    To create a knative service, you will need: kubernetes cluster with knative Serving installed.  For more information, see [Installing Knative Serving](https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/) and optionaly [knative CLI](https://knative.dev/docs/client/install-kn/) command.
    
