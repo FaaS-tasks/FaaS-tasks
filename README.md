@@ -11,9 +11,9 @@ Our ongoing work is based on the [knative](https://knative.dev/) serverless fram
 
 #### **2. [Installation](#installation)**
         
-#### **3. [Usage](#usage)**
+#### **3. [Tests](#tests)**
 
-#### **4. [Tests](#tests)**
+#### **4. [Usage](#usage)**
 
 ## General overview
 
@@ -132,18 +132,74 @@ Our project will focus on Knative Serving.
    ![result](start-knative.png )
    
    Check if all components are started:
-
    ```
     kubectl get pods -A
-
    ```
    ![pods](pods.png)
    
   2. **Setup a serverless (knative) Cluster in Multi-node**
 
    To deploy a knative multi-node cluster, follow the steps in the documentation  [knativeMulti-node](knativeCluster-Multi-Node.md)
+## Tests (Deploying a knative service)
+
+   To create a knative service, you will need: kubernetes cluster with knative Serving installed.  For more information, see [Installing Knative Serving](https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/) and optionaly [knative CLI](https://knative.dev/docs/client/install-kn/) command.
+   
+   You will deploy a "Hello world" Knative Service that accepts the environment variable TARGET and prints Hello ${TARGET}!
+   
+   Copy the following YAML into a file named `hello.yaml`:
+   
+   ```yaml
+   apiVersion: serving.knative.dev/v1
+        kind: Service
+        metadata:
+          name: hello
+        spec:
+          template:
+           spec:
+             containers:
+               - image: gcr.io/knative-samples/helloworld-go
+                 ports:
+                   - containerPort: 8080
+                 env:
+                   - name: TARGET
+                    value: "World"
+   ```
+   
+   Deploy the Knative Service by running the command:
+   
+   ```shell
+   kubectl apply -f hello.yaml
+   ```
+   
+   The output of this command is:
+   
+   ```shell
+   service.serving.knative.dev/hello created
+   ```
+   See if the service is started:
+   
+   ```shell
+   kubectl get ksvc
+   kubectl describe service hello
+   ```
+   
+   The output of this command is:
+   
+   ![start](start.png)
+   
+   Access your knative service by running the command:
+   
+   ```shell
+   echo "Accessing URL $(kn service describe hello -o url)"
+   curl "$(kn service describe hello -o url)"
+   ```
+   
+   ![knative service](AccessService.png)
+   
+   For more handling, consult the official site [knative](https://knative.dev/docs/)
 
 
+   
    
 
 
